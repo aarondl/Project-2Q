@@ -1,0 +1,14 @@
+bin/
+obj/
+sql/
+Release/
+Debug/
+TestResults/
+_ReSharper*/
+*.vssscc
+*.suo
+*.user
+*.trx
+*.dbmdl
+*.dbproj.schemaview
+*.docstates

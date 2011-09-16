@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Blackjack">
+</Property><Property Name="Solution File" Value="W:\Projects\Project2Q\2Q Modules\Blackjack\Blackjack.sln">
+</Property><Property Name="Date" Value="Tuesday, December 07, 2010">
+</Property><Property Name="Time" Value="22:37 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Blackjack.sln" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\Blackjack.sln">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Blackjack.csproj" Description="Project file successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\Blackjack.csproj">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Blackjack.csproj.user" Description="Project user file successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\Blackjack.csproj.user">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="BJMainClass.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\BJMainClass.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="RelayChannel.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\RelayChannel.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="RelayClient.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\RelayClient.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="RelayServer.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\RelayServer.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="CardDeck.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\CardDeck.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="GameState.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\GameState.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Hand.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\Hand.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Player.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\Player.cs">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as W:\Projects\Project2Q\2Q Modules\Blackjack\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="1" Project="Blackjack" Source="Blackjack.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Blackjack.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Blackjack" Source="Blackjack.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Blackjack.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Blackjack.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Blackjack" Source="Blackjack.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

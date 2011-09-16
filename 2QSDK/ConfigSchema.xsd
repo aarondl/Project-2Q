@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Configuration" type="configtype" nillable="false"/>
+
+    <xs:simpleType name="singleChar">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[!@#$^&amp;*()_+-=&lt;&gt;;:'/?.`,|\\~&quot;&apos;\]\[]"/>
+            <xs:length value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="url">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9.])+"/>
+            <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="strictString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z ]([a-zA-Z0-9 ])+"/>
+            <xs:whiteSpace value="preserve"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nwsStrictString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]([a-zA-Z0-9])+"/>
+            <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nwsString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9])+"/>
+            <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="configtype">
+        <xs:sequence>
+            <xs:element name="Settings" type="settingtype" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="Server" type="servertype" minOccurs="1" maxOccurs="32" nillable="false"/>
+            <xs:element name="Modules" type="modulestype" minOccurs="0" maxOccurs="32" nillable="false"/>
+            <xs:element name="RemoteConsole" type="rctype" minOccurs="0" maxOccurs="1" nillable="false"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="settingtype">
+        <xs:sequence>
+            <xs:element name="nickname" type="nwsStrictString" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="alternate" type="nwsStrictString" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="username" type="nwsString" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="info" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="port" type="xs:unsignedShort" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="quitMessage" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="autoJoinOnInvite" type="xs:boolean" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="operationTimeout" type="xs:unsignedInt" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="retryTimeout" type="xs:unsignedInt" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="socketBufferSize" type="xs:unsignedInt" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="sendInhibit" type="xs:unsignedInt" minOccurs="1" maxOccurs="1" nillable="false"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="servertype">
+        <xs:sequence>
+            <xs:element name="dns" type="url" minOccurs="1" maxOccurs="32" nillable="false"/>
+            <xs:element name="nickname" type="nwsStrictString" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="alternate" type="nwsStrictString" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="username" type="nwsString" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="info" type="xs:string" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="port" type="xs:unsignedShort" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="quitMessage" type="xs:string" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="autoJoinOnInvite" type="xs:boolean" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="operationTimeout" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="retryTimeout" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="socketBufferSize" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="sendInhibit" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="strictString"/>
+    </xs:complexType>
+
+    <xs:complexType name="modulestype">
+        <xs:sequence>
+            <xs:element name="Module" minOccurs="1" maxOccurs="unbounded" nillable="false">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="prettyname" type="strictString" minOccurs="0" maxOccurs="1" nillable="false"/>
+                        <xs:element name="filenames" type="xs:string" minOccurs="1" nillable="false"/>
+                        <xs:element name="script" minOccurs="0" maxOccurs="1" nillable="false">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="includes" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+                                    <xs:element name="language" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="servers" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                    <xs:attribute name="name" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="modulePath" type="xs:string"/>
+        <xs:attribute name="includePath" type="xs:string"/>
+        <xs:attribute name="frameworkPath" type="xs:string"/>
+        <xs:attribute name="prefix" type="singleChar"/>
+    </xs:complexType>
+
+    <xs:complexType name="rctype">
+        <xs:sequence>
+            <xs:element name="initialAuth" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="port" type="xs:unsignedShort" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="operationTimeout" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="retryTimeout" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="socketBufferSize" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+            <xs:element name="sendInhibit" type="xs:unsignedInt" minOccurs="0" maxOccurs="1" nillable="false"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

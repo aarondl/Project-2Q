@@ -1,0 +1,64 @@
+<Configuration>
+
+  <Settings> 
+    <nickname>House</nickname> 
+    <alternate>Project2Q</alternate>
+    <username>2Q</username>
+    <info>2Q Beta</info>
+    <port>6667</port>
+    <quitMessage>Hai ILU guys bai &lt;3</quitMessage>
+    <autoJoinOnInvite>true</autoJoinOnInvite>
+
+    <operationTimeout>5000</operationTimeout>
+    <retryTimeout>30000</retryTimeout>
+    <socketBufferSize>4096</socketBufferSize>
+    <sendInhibit>1000</sendInhibit>
+  </Settings>
+
+  <Server name="Gamesurge">
+    <dns>irc.gamesurge.net</dns>
+    <port>6667</port>
+    <autoJoinOnInvite>false</autoJoinOnInvite>
+    <sendInhibit>0</sendInhibit>
+  </Server>
+
+  <Modules prefix="." modulePath="..\..\..\..\..\2Q Modules" includePath="R:\Projects\" frameworkPath="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727">  <!-- This entire Modules thing is optional -->
+
+    <Module name="UserManagment.Main">
+      <filenames>Users\bin\Debug\UserM.dll</filenames>
+    </Module>
+
+    <!--<Module name="QuoteSpace.Quotes">
+      <filenames>Quotes\bin\Debug\Quotes.dll</filenames>
+    </Module>-->
+
+    <Module name="Webserver.Server">
+      <filenames>Webserver\bin\Debug\Webserver.dll</filenames>
+    </Module>
+
+    <Module name="Greeter.Greets">
+      <filenames>Greeter\bin\Debug\Greeter.dll</filenames>
+    </Module>
+
+    <Module name="Perform.Main">
+      <filenames>Perform\bin\Debug\Perform.dll</filenames>
+    </Module>
+
+    <Module name="Blackjack.BJMain">
+      <filenames>Blackjack\bin\Debug\Blackjack.dll</filenames>
+    </Module>
+
+  </Modules>
+
+  <RemoteConsole>                            <!--Optional, if non-existent no RemoteConsole is made. -->
+    <initialAuth>aaron</initialAuth>         <!--Mandatory, the port to listen on -->
+    <port>6667</port>
+
+    <operationTimeout>5000</operationTimeout>  <!--All these can inherit from Settings, but are optionally specified. -->
+    <retryTimeout>30000</retryTimeout>
+    <socketBufferSize>4096</socketBufferSize>
+    <sendInhibit>0</sendInhibit>
+  </RemoteConsole>
+
+
+</Configuration>

@@ -1,0 +1,151 @@
+body {
+	width: 654px;
+	background-color: #575757;
+	font-family: "Verdana";
+	font-size: 12px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.Bold {
+	display: inline;
+	font-weight: bold;
+}
+.OutLine {
+	margin: auto;
+}
+
+.Header {
+	background-image: url(images/Top.jpg);
+	width: 654px;
+	height: 50px;
+}
+
+.HeaderText {
+	width: 654px;
+	height: 10px;
+	color: #0f7041;
+	text-align: right;
+	position: relative;
+	top: 13px;
+	right: 13px;
+}
+
+.ProjectInformationWrapper {
+	padding-bottom: 9px;
+	width: 654px;
+	background-color: #FFFFFF;
+	float: left;
+}
+
+.ModuleHeader {
+	width: 200px;
+	text-align: left;
+	font-weight: bold;
+	color: #14a15d;
+	border-bottom: solid 1px #7f7f7f;
+	float: left;
+}
+
+.Modules {
+	width: 200px;
+	text-align: left;
+	color: #14a15d;
+	padding-left: 14px;
+	float: left;
+}
+
+.ModuleOffline {
+	color: #afafaf;
+}
+
+.ChannelHeader {
+	width: 200px;
+	text-align: left;
+	font-weight: bold;
+	color: #14a15d;
+	border-bottom: solid 1px #7f7f7f;
+	float: left;
+}
+
+.Channels {
+	width: 200px;
+	text-align: left;
+	color: #14a15d;
+	float: left;
+}
+
+.ChannelServer {
+	font-style: italic;
+	color: #0f7041;
+}
+
+.Gap {
+	width: 240px;
+	text-align: left;
+	color: #14a15d;
+	float: left;
+}
+
+.GapHeader {
+	width: 228px;
+	text-align: left;
+	font-weight: bold;
+	color: #14a15d;
+	border-bottom: solid 1px #7f7f7f;
+	float: left;
+}
+
+.InformationWrapper {
+	text-align: justify;
+	color: #14a15d;
+	padding: 0px 13px 9px 14px;
+	width: 627px;
+	background-color: #FFFFFF;
+	clear: left;
+}
+
+.InformationHeader {
+	width: 627px; 
+	text-align: left;
+	font-weight: bold;
+	color: #14a15d;
+	border-bottom: solid 1px #7f7f7f;
+}
+
+.DownloadWrapper {
+	text-align: justify;
+	color: #14a15d;
+	padding: 0px 13px 9px 14px;
+	width: 627px;
+	background-color: #FFFFFF;
+	clear: left;
+}
+
+.DownloadHeader {
+	width: 627px; 
+	text-align: left;
+	font-weight: bold;
+	color: #14a15d;
+	border-bottom: solid 1px #7f7f7f;
+}
+
+.Bottom {
+	background-image: url(images/Bottom.jpg);
+	width: 654px;
+	height: 24px;
+}
+
+.BottomText {
+	width: 654px;
+	height: 10px;
+	color: #0f7041;
+	text-align: center;
+	position: relative;
+	top: 5px;
+}
+
+a:link { text-decoration: none; color: #14a15d; }
+a:visited { text-decoration: none; color: #14a15d; }
+a:hover { text-decoration: underline; color: #14a15d; }
+a:active { text-decoration: none; color: #14a15d; }
